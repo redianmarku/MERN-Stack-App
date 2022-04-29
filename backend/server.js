@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use("/api/goals", require("./routes/goalsRouter"));
+app.use("/api/users", require("./routes/userRoute"));
 app.use(errorHandler);
 
 app.listen(port, () => console.log(`App running in the port ${port}.-.`));
